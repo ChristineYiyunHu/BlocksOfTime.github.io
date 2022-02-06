@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blocks_of_Time</title>
+        <script src="Blocks_of_Time.js"></script>
+        
+        <style>
+            .button{
+                border:none;
+                color:forestgreen;
+                text-align: center;
+                display:inline-block;
+                font-size: 30px;
+                margin: inherit;
+                position:inherit;
+            }
+        </style>
+        
+    </head>
+    
+    <body onload="start();">
+        <div style = "text-align:center;">
+            <p id = "plus_time" style = "color:forestgreen; font-size:30px; margin-bottom: inherit; margin-top: inherit; text-align: center"></p>
+            <canvas id="display" width="320px" height ="320px"></canvas>
+        </div>
+        <audio src="bing.mp3" style="display:none" id="s1"></audio>
+        <audio src="clear.mp3" style="display:none" id="s2"></audio>
+        <audio src="error.mp3" style="display:none" id="error3"></audio>
+        <audio src="win1.mp3" style="display:none" id="winn"></audio>
+        <audio src="lose.mp3" style="display:none" id="lose"></audio>
+        
+        <p id="the_time" style="color:darkred; font-size:50px; text-align:center; margin-top: inherit; margin-bottom: inherit;"></p>
+        <p id="the_score" style="color:black; font-size:40px; text-align:center; margin-bottom:inherit; margin-top:inherit; "></p>
+        
+        <p id="heighest_time" style = "font-size:30px; text-align:left; margin-bottom:inherit; margin-top:inherit; display: inline;"></p>
+        <button class="button" style = "text-align:right; display: inline;"> Press s Key To Start / Restart! </button>
+
+        <h1 style = "text-align:center; font-size:28px;"> Instruction: Click the Up, Down, Left and Right arrows to move the green blocks in the arrow's opposite direction, and press Space Bar to place down the block. <br> Fill the rows and/or columns to earn 128 points to win in the least amount of time, good luck!
+        </h1>
+        
+    </body>
+</html>
