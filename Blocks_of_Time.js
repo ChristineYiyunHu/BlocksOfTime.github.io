@@ -301,20 +301,20 @@ function can_place_down(){ //if there are no blue (immovable) blocks at the same
 }
 
 function key_pressed(event){ 
-    if(event.keyCode == 37 && not_on_right_edge() && running) {//move to the right if not on right edge and running is true
+    if(event.keyCode == 39 && not_on_right_edge() && running) {//move to the right if not on right edge and running is true
         for(var i = 0; i<blocks_blue1.length; i++){
             blocks_blue1[i].the_x(blocks_blue1[i].the_xx() + 32);
         }
     }
-    else if (event.keyCode == 39 && not_on_left_edge() && running){ // move left
+    else if (event.keyCode == 37 && not_on_left_edge() && running){ // move left
         for(var i = 0; i<blocks_blue1.length; i++){
             blocks_blue1[i].the_x(blocks_blue1[i].the_xx() - 32);
         }
-    }else if (event.keyCode == 40 && not_on_upper_edge() && running){//move up
+    }else if (event.keyCode == 38 && not_on_upper_edge() && running){//move up
         for(var i = 0; i<blocks_blue1.length; i++){
             blocks_blue1[i].the_y(blocks_blue1[i].the_yy() - 32);
         }
-    }else if(event.keyCode == 38 && not_on_lower_edge() && running){// move down
+    }else if(event.keyCode == 40 && not_on_lower_edge() && running){// move down
         for(var i = 0; i<blocks_blue1.length; i++){
             blocks_blue1[i].the_y(blocks_blue1[i].the_yy() + 32);
         }
