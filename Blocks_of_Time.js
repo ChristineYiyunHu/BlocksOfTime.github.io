@@ -349,7 +349,6 @@ function unseen_timer(){ //updates time and score
     init_time = new Date().getTime();
     two_min = final_time - init_time;          
     seconds = 60;
-    // document.getElementById("the_time").style.visibility = "visible";
     document.getElementById("the_score").style.visibility = "visible";
     document.getElementById("plus_time").style.visibility = "hidden";
     
@@ -379,7 +378,7 @@ function unseen_timer(){ //updates time and score
         }
         two_min = final_time - init_time;
         seconds = Math.floor((two_min) / 1000);
-        document.getElementById("the_time").innerHTML = "Time: " + seconds + " sec left";
+        document.getElementById("the_time").innerHTML = seconds;
         document.getElementById("plus_time").innerHTML = "+" + very_extra_time + " seconds";
         
     }, 10);
@@ -391,11 +390,10 @@ function win(){ // checks if win or lose, and displays messages accordingly
     clearTimeout(call_win);
     clearInterval(unseen_time);
     running = false; //paralyze keys functions
-    // document.getElementById("the_time").style.visibility = "hidden";
     document.getElementById("plus_time").style.visibility = "hidden";
     
     if (score >= 128 && win_sec <= heigh_time){ // win, but did not get a better time
-        winn.play();
+        winn.play(); //sound file name
         alert("YOU WON! With " + win_sec + " seconds left! Good Job! \nPress s key to play AGAIN!");
     }
     if(score >= 128 && win_sec > heigh_time){ // win and achieve best time

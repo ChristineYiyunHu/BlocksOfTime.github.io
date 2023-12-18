@@ -21,7 +21,7 @@
             align-items: center;
             justify-content: center;
             margin: auto;
-            margin-top: 100px; /* Top and bottom margin */
+            margin-top: 30px; /* Top and bottom margin */
             overflow: hidden;
             height: 60vh;
             border: 10px solid #ccc;
@@ -33,9 +33,25 @@
     </head>
     
     <body onload="start();" style="background-color:#222;">
-        <p id="the_time" style="color:darkred; font-size:50px; text-align:center; margin-top: inherit; margin-bottom: inherit;">Time: 60 sec left</p>
-        <div style = "text-align:center; margin-top: 30px;"  >
-            <p id = "plus_time" style = "color:forestgreen; font-size:30px; margin-bottom: inherit; margin-top: inherit; text-align: center"></p>
+
+            <!-- <p style="color:#7c7; font-size:50px; text-align:center; margin-top: 10px; margin-bottom: 10px;">Time: <span id="the_time" style=" font-size: 1.4em; color: #fff;">60</span> sec left  <span id="plus_time" style="display: inline-block; color:#7c7; margin-left: 30px;"> add time</span></p> -->
+            
+            <!-- <div style="text-align: center;">
+                <span style="color:#7c7; font-size:50px; text-align:center; margin-top: 10px; margin-bottom: 10px;">Time: <span id="the_time" style="font-size: 1.4em; color: #fff;">60</span> sec left </span>
+            </div>
+            <span id="plus_time" style="display: inline-block; color:#7c7; margin-left: 30px;"> </span> -->
+
+            <div style="text-align: center;">
+                <span style="color:#7c7; font-size:50px; display: inline-block; margin-top: 10px; margin-left:100px; margin-bottom: 10px;">
+                    Time: <span id="the_time" style="font-size: 1.4em; color: #fff;">60</span> sec left
+                </span>
+                <span id="plus_time" style="display: inline-block; color:#7c7; margin-left: 30px;"></span>
+            </div>
+            
+        
+        <div style = "text-align:center; margin-top: 10px;"  >
+            <!-- <p id = "plus_time" style = "color:#7c7; font-size:30px; margin-bottom: 10px; margin-top: 10px; text-align: center">Cancel rows and columns to earn extra time</p> -->
+            <p style = "color:#7c7; font-size:18px; margin-bottom: 0px; margin-top: 10px; text-align: center">(Use arrow keys to move in reverse direction and space to place down)</p>
             <canvas class="my_canvas" id="display" width="320px" height ="320px"></canvas>
         </div>
         <audio src="bing.mp3" style="display:none" id="s1"></audio>
@@ -44,17 +60,17 @@
         <audio src="win1.mp3" style="display:none" id="winn"></audio>
         <audio src="lose.mp3" style="display:none" id="lose"></audio>
         
-        
-        <p id="the_score" style="color:black; font-size:40px; text-align:center; margin-bottom:inherit; margin-top:inherit; "></p>
-        
-        <p id="heighest_time" style = "font-size:30px; text-align:left; margin-bottom:inherit; margin-top:inherit; display: inline;"></p>
-        <!-- <button class="button" style = "text-align:right; display: inline;"> Press S To Start / Restart! </button> -->
+        <div style="text-align:center;" >
 
-        <button class="button" style="text-align: right; display: inline;">
-            Press <span style="font-weight: bold; font-size: 1.2em; color: #090;">S</span> To Start / Restart!
-        </button>
+            <button class="button" style="text-align: center; display: inline; margin-top: 20px; color:#7c7; background-color: rgba(150, 150, 150, 0.5);">
+                Press <span style="font-weight: bold; font-size: 1.2em; color: #7c7;">S</span> To Start / Restart!
+            </button>
+            <p id="the_score" style="color:#7c7; font-size:40px; text-align:center; ">Score: 0</p>  
+            <!-- TODO: Change score to best score after we... -->
 
-        <!-- <h1 style = "text-align:center; font-size:28px;"> Instruction: Click the Up, Down, Left and Right arrows to move the green blocks in the arrow's opposite direction, and press Space Bar to place down the block. <br> Fill the rows and/or columns to earn 128 points to win in the least amount of time, good luck! </h1> -->
+            <!-- <p id="heighest_time" style = "font-size:30px; text-align:left; margin-bottom:inherit; margin-top:inherit; display: inline;"></p> --> 
+        </div>  
+
         
     </body>
 </html>
