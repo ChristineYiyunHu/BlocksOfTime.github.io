@@ -16,8 +16,7 @@ var score = 0;
 var unseen_time;
 var two_min;
 var init_time;
-var final_time;
-var minutes;              
+var final_time;          
 var seconds;
 var extra_time = 0;
 var countDownDate = new Date().getTime();
@@ -348,10 +347,9 @@ function key_pressed(event){
 function unseen_timer(){ //updates time and score 
     final_time = new Date().getTime() + 61000; // timer is set to 61 seconds instead of 60 due to a delay in the display of timer on the screen
     init_time = new Date().getTime();
-    two_min = final_time - init_time;
-    minutes = 01;           
-    seconds = 00;
-    document.getElementById("the_time").style.visibility = "visible";
+    two_min = final_time - init_time;          
+    seconds = 60;
+    // document.getElementById("the_time").style.visibility = "visible";
     document.getElementById("the_score").style.visibility = "visible";
     document.getElementById("plus_time").style.visibility = "hidden";
     
@@ -380,9 +378,8 @@ function unseen_timer(){ //updates time and score
             }, 2500);
         }
         two_min = final_time - init_time;
-        minutes = Math.floor((two_min % (1000 * 60 * 60)) / (1000 * 60));                
-        seconds = Math.floor((two_min % (1000 * 60)) / 1000);
-        document.getElementById("the_time").innerHTML = "Time 0" + minutes + ":" + seconds + " ";
+        seconds = Math.floor((two_min) / 1000);
+        document.getElementById("the_time").innerHTML = "Time: " + seconds + " sec left";
         document.getElementById("plus_time").innerHTML = "+" + very_extra_time + " seconds";
         
     }, 10);
@@ -394,7 +391,7 @@ function win(){ // checks if win or lose, and displays messages accordingly
     clearTimeout(call_win);
     clearInterval(unseen_time);
     running = false; //paralyze keys functions
-    document.getElementById("the_time").style.visibility = "hidden";
+    // document.getElementById("the_time").style.visibility = "hidden";
     document.getElementById("plus_time").style.visibility = "hidden";
     
     if (score >= 128 && win_sec <= heigh_time){ // win, but did not get a better time
