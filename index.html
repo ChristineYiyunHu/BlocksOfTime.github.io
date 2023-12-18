@@ -7,6 +7,7 @@
         <style>
             .button{
                 border:none;
+                border-radius: 10px;
                 color:forestgreen;
                 text-align: center;
                 display:inline-block;
@@ -14,14 +15,28 @@
                 margin: inherit;
                 position:inherit;
             }
+
+            .my_canvas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 100px; /* Top and bottom margin */
+            overflow: hidden;
+            height: 60vh;
+            border: 10px solid #ccc;
+            border-radius: 10px;
+            }
+
         </style>
         
     </head>
     
-    <body onload="start();">
-        <div style = "text-align:center;">
+    <body onload="start();" style="background-color:#222;">
+        <p id="the_time" style="color:darkred; font-size:50px; text-align:center; margin-top: inherit; margin-bottom: inherit;">Time: 60 sec left</p>
+        <div style = "text-align:center; margin-top: 30px;"  >
             <p id = "plus_time" style = "color:forestgreen; font-size:30px; margin-bottom: inherit; margin-top: inherit; text-align: center"></p>
-            <canvas id="display" width="320px" height ="320px"></canvas>
+            <canvas class="my_canvas" id="display" width="320px" height ="320px"></canvas>
         </div>
         <audio src="bing.mp3" style="display:none" id="s1"></audio>
         <audio src="clear.mp3" style="display:none" id="s2"></audio>
@@ -29,14 +44,17 @@
         <audio src="win1.mp3" style="display:none" id="winn"></audio>
         <audio src="lose.mp3" style="display:none" id="lose"></audio>
         
-        <p id="the_time" style="color:darkred; font-size:50px; text-align:center; margin-top: inherit; margin-bottom: inherit;"></p>
+        
         <p id="the_score" style="color:black; font-size:40px; text-align:center; margin-bottom:inherit; margin-top:inherit; "></p>
         
         <p id="heighest_time" style = "font-size:30px; text-align:left; margin-bottom:inherit; margin-top:inherit; display: inline;"></p>
-        <button class="button" style = "text-align:right; display: inline;"> Press s Key To Start / Restart! </button>
+        <!-- <button class="button" style = "text-align:right; display: inline;"> Press S To Start / Restart! </button> -->
 
-        <h1 style = "text-align:center; font-size:28px;"> Instruction: Click the Up, Down, Left and Right arrows to move the green blocks in the arrow's opposite direction, and press Space Bar to place down the block. <br> Fill the rows and/or columns to earn 128 points to win in the least amount of time, good luck!
-        </h1>
+        <button class="button" style="text-align: right; display: inline;">
+            Press <span style="font-weight: bold; font-size: 1.2em; color: #090;">S</span> To Start / Restart!
+        </button>
+
+        <!-- <h1 style = "text-align:center; font-size:28px;"> Instruction: Click the Up, Down, Left and Right arrows to move the green blocks in the arrow's opposite direction, and press Space Bar to place down the block. <br> Fill the rows and/or columns to earn 128 points to win in the least amount of time, good luck! </h1> -->
         
     </body>
 </html>
