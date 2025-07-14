@@ -32,7 +32,7 @@ Reach **128 points** before the **1-minute timer** runs out to win!
 ![Gameplay demo of BlocksOfTime](game_play.png)
 
 ## 👩‍💻 Developer  
-Created by **Christine Yiyun Hu**
+Created by **Christine Johnson**
 
 ## 📄 License  
 This project is open for learning and personal use.  
