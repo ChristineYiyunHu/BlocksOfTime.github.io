@@ -29,6 +29,7 @@ Reach **128 points** before the **1-minute timer** runs out to win!
 
 ## 🕹️ Try It Now  
 🔗 [https://christineyiyunhu.github.io/BlocksOfTime.github.io/](https://christineyiyunhu.github.io/BlocksOfTime.github.io/)
+![Gameplay demo of BlocksOfTime](game_play.png)
 
 ## 👩‍💻 Developer  
 Created by **Christine Yiyun Hu**
